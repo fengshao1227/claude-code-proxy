@@ -34,7 +34,8 @@ MANIFEST
 #  Usually these files are written by a python script from a template
 #  before PyInstaller builds the exe, so as to inject date/other infos into it.
 *.manifest
-*.spec
+# Keep claude-code-proxy.spec for reproducible builds
+!claude-code-proxy.spec
 
 # Installer logs
 pip-log.txt
@@ -173,5 +174,8 @@ poetry.toml
 # LSP config files
 pyrightconfig.json
 
+# Proxy runtime files
+logs/
+.proxy.pid
+
 # End of https://www.toptal.com/developers/gitignore/api/python
-n
